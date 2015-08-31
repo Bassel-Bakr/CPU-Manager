@@ -65,7 +65,7 @@ shared_strings get_scaling_available_governors(u8 & core);
 u32 get_scaling_cur_freq(u8 & core);
 shared_string get_scaling_driver(u8 & core);
 shared_string get_scaling_governor(u8 & core);
-u32 get_scaling_max_frequ8 & core();
+u32 get_scaling_max_freq(u8 & core);
 u32 get_scaling_min_freq(u8 & core);
 u32 get_scaling_setspeed(u8 & core);
 
