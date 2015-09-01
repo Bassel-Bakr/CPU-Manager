@@ -9,11 +9,13 @@
 
 #    define LOG(x) puts(x)
 #    define __LOG(x) puts(#x)
+#    define ASSERT(x) assert(x)
 
 #  else
 
 #    define LOG(x)
 #    define __LOG(x)
+#    define ASSERT(x)
 
 #  endif
 

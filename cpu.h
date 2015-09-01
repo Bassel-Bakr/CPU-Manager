@@ -57,8 +57,8 @@ u32 get_cpuinfo_max_freq(u8 & core);
 u32 get_cpuinfo_min_freq(u8 & core);
 u32 get_cpuinfo_transition_latency(u8 & core);
 
-sh_u8s get_freqdomain_cpus(u8 & core);
-sh_u8s get_related_cpus(u8 & core);
+shared_u8s get_freqdomain_cpus(u8 & core);
+shared_u8s get_related_cpus(u8 & core);
 
 shared_u32s get_scaling_available_frequencies(u8 & core);
 shared_strings get_scaling_available_governors(u8 & core);

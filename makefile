@@ -11,7 +11,7 @@ LDFLAGS=-fdata-sections \
 				-ffunction-sections
 
 
-default: cpu main
+default: utils cpu main
 	$(TOOL) $(FLAGS) cpu.o main.o -o cpu $(LDFLAGS)
 
 main: main.cpp main.h constants.h
@@ -19,6 +19,9 @@ main: main.cpp main.h constants.h
 
 cpu: cpu.cpp cpu.h constants.h
 	$(TOOL) $(FLAGS) -c cpu.cpp -o cpu.o $(LDFLAGS)
+
+utils: utils.cpp utils.h constants.h
+	$(TOOL) $(FLAGS) -c utils.cpp -o utils.o $(LDFLAGS)
 
 format: *.h *.cpp
 	indent -kr -br -brf -brs -ce -cdw -l80 -cli2 -ci2 -i2 -ppi2 -nut *.c* *.h*

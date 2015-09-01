@@ -2,10 +2,16 @@
 #  define __CONSTATNTS_H__
 #  include <memory>
 #  include <string>
+#  include <vector>
+#  include "debug.h"
+
+#  define LINE_MAX 128
+#  define LINES_MAX 32
 
 // Array DELETER
 auto arr_del =[](auto arr) { delete[]arr;
 };
+
 
 // Signed
 typedef char s8;
@@ -22,20 +28,20 @@ typedef unsigned int u32;
 typedef unsigned long long u64;
 
 // Arrays
-typedef std::shared_ptr < u8[], arr_del > shared_u8s;
-typedef std::shared_ptr < u16[], arr_del > shared_u16s;
-typedef std::shared_ptr < u32[], arr_del > shared_u32s;
-typedef std::shared_ptr < u64[], arr_del > shared_u64s;
+typedef std::shared_ptr < u8 > shared_u8s;
+typedef std::shared_ptr < u16 > shared_u16s;
+typedef std::shared_ptr < u32 > shared_u32s;
+typedef std::shared_ptr < u64 > shared_u64s;
 
-typedef std::unique_ptr < char[] > unique_cstring;
-typedef std::unique_ptr < char[][] > unique_cstring;
+typedef std::unique_ptr < char >unique_cstring;
+typedef std::unique_ptr < char[] > unique_cstrings;
 typedef std::unique_ptr < std::string > unique_string;
 typedef std::unique_ptr < std::string[] > unique_strings;
 
-typedef std::shared_ptr < char[], arr_del > shared_cstring;
-typedef std::shared_ptr < char[][], arr_del > shared_cstrings
-  typedef std::shared_ptr < std::string > shared_string;
-typedef std::shared_ptr < std::string[], arr_del > shared_strings;
+typedef std::shared_ptr < char >shared_cstring;
+typedef std::shared_ptr < std::vector < char[] > >shared_cstrings;
+typedef std::shared_ptr < std::string > shared_string;
+typedef std::shared_ptr < std::vector < std::string > >shared_strings;
 
 // Misc
 typedef char *cstring;
